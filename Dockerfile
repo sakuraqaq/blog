@@ -2,4 +2,9 @@ FROM centos7_nginx:latest
 
 WORKDIR /app
 
-COPY * /usr/local/nginx/html
+RUN mkdir /image
+RUN mkdir /css
+
+COPY /image/* /usr/local/nginx/html/image
+COPY /css/* /usr/local/nginx/html/css
+COPY index.html /usr/local/nginx/html
