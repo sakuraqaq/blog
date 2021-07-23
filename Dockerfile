@@ -1,4 +1,4 @@
-FROM centos_7nginx:latest
+FROM centos7_nginx:latest
 
 WORKDIR /app
 
