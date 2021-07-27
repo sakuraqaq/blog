@@ -13,8 +13,7 @@ RUN yum -y install wget
 #下载nginx文件并解压
 RUN wget http://nginx.org/download/$NG_VERSION.tar.gz && tar xzvf $NG_VERSION.tar.gz
 #安装编译依赖包
-RUN yum install -y gcc gcc-c++ glibc make autoconf openssl openssl-devel && yum install -y pcre-devel libx
-slt-devel gd-devel GeoIP GeoIP-devel GeoIP-data
+RUN yum install -y gcc gcc-c++ glibc make autoconf openssl openssl-devel && yum install -y pcre-devel libxslt-devel gd-devel GeoIP GeoIP-devel GeoIP-data
 #清理仓库
 RUN yum clean all
 #创建nginx用户
