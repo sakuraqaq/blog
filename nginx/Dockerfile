@@ -7,7 +7,7 @@ WORKDIR /usr/local/src/
 #定义环境变量
 ENV NG_VERSION nginx-1.21.0
 #安装epel仓库
-RUN yum -y install epel-releasevi
+RUN yum -y install epel-release
 #安装wget
 RUN yum -y install wget
 #下载nginx文件并解压
