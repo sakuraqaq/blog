@@ -21,12 +21,7 @@ RUN useradd -M -s /sbin/nologin nginx
 #切换工作目录
 WORKDIR /usr/local/src/$NG_VERSION
 #编译安装nginx
-RUN ./configure --user=nginx --group=nginx --prefix=/usr/local/nginx --with-file-aio --with-http_ssl_modul
-e --with-http_realip_module --with-http_addition_module --with-http_xslt_module --with-http_image_filter_m
-odule --with-http_geoip_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with
--http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_auth_request_module
---with-http_random_index_module --with-http_secure_link_module --with-http_degradation_module --with-http_
-stub_status_module && make && make install
+RUN ./configure --user=nginx --group=nginx --prefix=/usr/local/nginx --with-file-aio --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_xslt_module --with-http_image_filter_module --with-http_geoip_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_auth_request_module --with-http_random_index_module --with-http_secure_link_module --with-http_degradation_module --with-http_stub_status_module && make && make install
 #复制测试页面到容器中
 ADD index.html /usr/local/nginx/html
 #设置容器中要挂在到宿主机的目录
