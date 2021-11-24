@@ -129,7 +129,7 @@
             console.log("id" + id)
             // localStorage.removeItem(id);
             // this.Storage.writeData();
-            fetch('http://127.0.0.1:4398/blog/deleteBlog', {
+            fetch('http://101.37.76.61:4398/blog/deleteBlog', {
                 method: 'POST', // or 'PUT'
                 body: id, // data can be `string` or {object}!
                 headers: new Headers({
@@ -172,7 +172,7 @@
                         } else {
                             //   localStorage.setItem(time, data.value + "|" + "匿名发言者" + "|" + this.getDateTime());//将毫秒数存入Key值中，可以降低Key值重复率
                         }
-                        fetch('http://127.0.0.1:4398/blog/addBlog', {
+                        fetch('http://101.37.76.61:4398/blog/addBlog', {
                             method: 'POST', // or 'PUT'
                             body: JSON.stringify({
                                 userName: named, content: data.value
@@ -193,7 +193,7 @@
                 writeData: function ()//输出数据
                 {
                     var dataHtml = "", data;
-                    fetch('http://127.0.0.1:4398/blog/listBlog')
+                    fetch('http://101.37.76.61:4398/blog/listBlog')
                         .then(res => res.json()).then(response => {
                         data = response.data;
                         console.log('response', response.data)
