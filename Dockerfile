@@ -9,3 +9,4 @@ COPY /image /usr/local/nginx/html/image
 COPY /css /usr/local/nginx/html/css
 COPY /css /usr/local/nginx/html/css
 COPY index.html /usr/local/nginx/html/index.html
+COPY message.html /usr/local/nginx/html/message.html
