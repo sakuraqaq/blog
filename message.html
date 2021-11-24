@@ -129,7 +129,7 @@
             console.log("id" + id)
             // localStorage.removeItem(id);
             // this.Storage.writeData();
-            fetch('https://101.37.76.61:4398/blog/deleteBlog', {
+            fetch('https://aichidoubao.com/blog/deleteBlog', {
                 method: 'POST', // or 'PUT'
                 body: id, // data can be `string` or {object}!
                 headers: new Headers({
@@ -172,7 +172,7 @@
                         } else {
                             //   localStorage.setItem(time, data.value + "|" + "匿名发言者" + "|" + this.getDateTime());//将毫秒数存入Key值中，可以降低Key值重复率
                         }
-                        fetch('https://101.37.76.61:4398/blog/addBlog', {
+                        fetch('https://aichidoubao.com/blog/addBlog', {
                             method: 'POST', // or 'PUT'
                             body: JSON.stringify({
                                 userName: named, content: data.value
@@ -193,7 +193,7 @@
                 writeData: function ()//输出数据
                 {
                     var dataHtml = "", data;
-                    fetch('https://101.37.76.61:4398/blog/listBlog')
+                    fetch('https://aichidoubao.com/blog/listBlog')
                         .then(res => res.json()).then(response => {
                         data = response.data;
                         console.log('response', response.data)
