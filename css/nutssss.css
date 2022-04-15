@@ -272,18 +272,17 @@ body {
 
 #footer {
     width: 100%;
-    color: white;
+    color: black;
     float: left;
     text-align: center;
     position: fixed;
     bottom: 0;
     margin-bottom: 30px;
-    /* background-color: blue; */
 }
 
 #footer a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 #footer a:hover {
